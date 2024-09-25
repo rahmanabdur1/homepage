@@ -1,0 +1,124 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 20px;
+    height: 90px; /* Set height to 90px */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Position at the top */
+    left: 0; /* Start from the left edge */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.navbar-logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-menu li {
+    margin: 0 15px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    margin-left: 20px;
+}
+
+.search-input {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjusted based on navbar height */
+    right: 20px;
+    width: 0;
+    height: 55px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #e1e1e1;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+    outline: none;
+    opacity: 0;
+}
+
+.search-input input{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    box-sizing: border-box;
+    font-size: 14px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.search-input.open {
+    display: block;
+    width: 300px;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px; /* Positioned under the navbar */
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-menu.open {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .search-input {
+        top: 100px; /* Adjusted based on navbar height */
+    }
+}

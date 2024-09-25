@@ -1,0 +1,25 @@
+.home_container{
+    margin-top: 100vh;
+}
+
+.scroll-image {
+    flex: 1;
+    height: 500px;
+}
+
+.section{
+    display: flex;
+}
+
+
+
+ 
+ .scroll-image {
+    transition: transform 0.3s ease-out;
+    will-change: transform;
+}
+
+.home_container {
+    position: relative;
+    overflow: hidden;
+}

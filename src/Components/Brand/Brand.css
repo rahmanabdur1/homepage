@@ -1,0 +1,76 @@
+/* Brand.css */
+@keyframes flipUp {
+    0% {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.flip-up {
+    animation: flipUp 1s ease forwards;
+}
+
+.fade-up {
+    animation: fadeUp 1s ease forwards;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hide-title,
+.hide-images {
+    opacity: 0;
+    transform: translateY(30px); /* For images */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.brand_images img {
+    width: 100px;
+    height: auto;
+    opacity: 1; /* Initially visible */
+    transform: translateY(0); /* No movement initially */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Duration of fade-up */
+}
+
+/* Staggered delays for images 4, 5, and 6 */
+.brand_images img:nth-child(4) {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Positioned below */
+}
+
+.brand_images img:nth-child(5) {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Positioned below */
+}
+
+.brand_images img:nth-child(6) {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Positioned below */
+}
+
+/* Adding staggered delays */
+.fade-up:nth-child(4) {
+    animation-delay: 0.1s; /* Delay for 4th image */
+}
+
+.fade-up:nth-child(5) {
+    animation-delay: 0.3s; /* Delay for 5th image */
+}
+
+.fade-up:nth-child(6) {
+    animation-delay: 0.5s; /* Delay for 6th image */
+}
